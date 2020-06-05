@@ -1,0 +1,12 @@
+<h1>Hola amigos!</h1>
+
+{% for proj in projects %}
+
+<h2>{{ proj.title }}</h2>
+<br>
+<p>{{ proj.description }}</p>
+<br>
+<img src="{{ proj.image1.url }}">
+<a href="{{ proj.url }}">Sweet Link</a>
+
+{% endfor %}
