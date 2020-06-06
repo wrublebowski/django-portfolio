@@ -9,3 +9,7 @@ class PortfolioProject(models.Model):
     # provide the direction     and pip install pillow
 
     url = models.URLField(blank=True)
+
+    # to display titles in admin mode
+    def __str__(self):
+        return self.title

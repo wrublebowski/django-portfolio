@@ -1,11 +1,13 @@
-<h1>Let's be wise and read:</h1>
+<h1>Be wise and read:</h1>
+
+<h3>I have proudly written {{ blog_projects.count }} blog{{ blog_projects.count|pluralize }}</h3>
 
 {% for blog in blog_projects %}
 
 <br>
-<h2>{{ blog.title }}</h2>
-<h3>{{ blog.date }}</h3>
-<h4>{{ blog.description }}</h4>
+<a href="{% url 'blog_app:detail' blog.id %}""><h2>{{ blog.title }}</h2></a>
+<h3>{{ blog.date|date:'M d Y'|upper }}</h3>
+<h4>{{ blog.description|truncatechars:120 }}</h4>
 <br>
 
 {% endfor %}
