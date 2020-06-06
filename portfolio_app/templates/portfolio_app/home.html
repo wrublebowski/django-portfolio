@@ -1,5 +1,9 @@
 <h1>Hola amigos!</h1>
+{% load static %}
 
+<a href="{% static 'portfolio_app/oferta_kawa.pdf' %}">Oferta - Bar Kawowy</a>
+<br>
+<img src="{% static 'portfolio_app/euforma-112.jpg' %}" alt="Kuba the barista in Euforma Saloon">
 {% for proj in projects %}
 
 <h2>{{ proj.title }}</h2>
