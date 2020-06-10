@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 class BlogProject(models.Model):
 
-    title = models.CharField(max_length=100)
+    title = models.CharField(max_length=200)
     date = models.DateField()
-    description = models.TextField(max_length=10000)
+    description = models.TextField()
 
     # to display titles in admin mode
     def __str__(self):
