@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path ('', views.home, name="home"),
     path('blog_app/', include('blog_app.urls')), #<--"redirects to blog_app.urls!"
+    path('password_generator_app/', include('password_generator_app.urls')), #<--"redirects to pass.gen.app .urls!"
     ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
