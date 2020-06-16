@@ -5,9 +5,6 @@ import random
 def home(request):
     return render(request, 'password_generator_app/home.html')
 
-def aboutme(request):
-    return render(request, 'password_generator_app/about_me.html')
-
 def passwordo(request):
     random_password = ''
     characters = list('abcdefghijklmnopqrstxyz')
