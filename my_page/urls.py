@@ -19,11 +19,13 @@ from django.conf.urls.static import static
 from django.conf import settings
 from portfolio_app import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path ('', views.home, name="home"),
     path('blog_app/', include('blog_app.urls')), #<--"redirects to blog_app.urls!"
-    path('password_generator_app/', include('password_generator_app.urls')), #<--"redirects to pass.gen.app .urls!"
+    path('password_generator_app/', include('password_generator_app.urls')), #<--"redirects to pass_gen_app .urls!"
+    path('todo_app/', include('todo_app.urls')), #<--"redirects to todo_app .urls!"
     ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

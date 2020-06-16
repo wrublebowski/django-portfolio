@@ -27,6 +27,3 @@ def passwordo(request):
 
     # dictionary for connection between views.py and home.html
     return render(request, 'password_generator_app/passwordo.html', {"the_haslo":random_password})
-
-# def order(request):
-#     return render(request, 'password_generator_app/order.html')
